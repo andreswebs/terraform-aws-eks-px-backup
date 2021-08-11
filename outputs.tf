@@ -1,9 +1,9 @@
 output "namespace" {
-  value       = var.k8s_namespace
+  value       = helm_release.this.metadata.namespace
   description = "The name (`metadata.name`) of the namespace"
 }
 
 output "release" {
-  description = "Helm release"
   value = helm_release.this
+  description = "Helm release"
 }
