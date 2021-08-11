@@ -1,5 +1,5 @@
 output "namespace" {
-  value       = helm_release.this.metadata.namespace
+  value       = helm_release.this.metadata[0].namespace
   description = "The name (`metadata.name`) of the namespace"
 }
 
